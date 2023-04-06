@@ -1,5 +1,3 @@
-`# frozen_string_literal: true`
-
 def decode_char(morse)
   charts = {
     '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E', '..-.' => 'F', '--.' => 'G', '....' => 'H',
