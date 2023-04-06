@@ -1,4 +1,6 @@
-def decode_char(morse) 
+`# frozen_string_literal: true`
+
+def decode_char(morse)
   charts = {
     '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E', '..-.' => 'F', '--.' => 'G', '....' => 'H',
     '..' => 'I', '.---' => 'J', '-.-' => 'K', '.-..' => 'L', '--' => 'M', '-.' => 'N', '---' => 'O', '.--.' => 'P',
@@ -9,17 +11,17 @@ def decode_char(morse)
 end
 
 def decode_word(word)
-  wholeWord = []
-  wordsArray = word.split(' ')
-  wordsArray.each  { |char| wholeWord.push(decode_char(char)) }
-  wholeWord.join()
+  whole_word = []
+  words_array = word.split(/ /)
+  words_array.each { |char| whole_word.push(decode_char(char)) }
+  whole_word.join
 end
 
 def decode(sentence)
-  wholeSentence = []
-  sentenceArray = sentence.split('   ')
-  sentenceArray.each{ |word| wholeSentence.push(decode_word(word)) }
-  wholeSentence.join(' ')
+  whole_sentence = []
+  sentence_array = sentence.split('   ')
+  sentence_array.each { |word| whole_sentence.push(decode_word(word)) }
+  whole_sentence.join(' ')
 end
 
 puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
