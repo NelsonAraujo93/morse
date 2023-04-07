@@ -22,4 +22,7 @@ def decode(sentence)
   whole_sentence.join(' ')
 end
 
+puts decode_char(".-")
+puts decode_word("-- -.--")
+puts decode("-- -.--   -. .- -- .")
 puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
