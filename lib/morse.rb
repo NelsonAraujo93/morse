@@ -8,18 +8,4 @@ def decode_char(morse)
   charts[morse]
 end
 
-def decode_word(word)
-  whole_word = []
-  words_array = word.split(/ /)
-  words_array.each { |char| whole_word.push(decode_char(char)) }
-  whole_word.join
-end
-
-def decode(sentence)
-  whole_sentence = []
-  sentence_array = sentence.split('   ')
-  sentence_array.each { |word| whole_sentence.push(decode_word(word)) }
-  whole_sentence.join(' ')
-end
-
 puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
